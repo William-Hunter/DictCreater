@@ -1,8 +1,10 @@
 #!usr/bin/python
 # coding=gbk
 import sys
+import time
+StartTime=time.time()
 
-letter=['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z','1','2','3','4','5','6','7','8','9','0']
+letter=['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z','1','2','3','4','5','6','7','8','9','0','_']
 File=file(sys.argv[2],'w')
 def make(line,level):
 	level-=1	
@@ -28,4 +30,4 @@ else:
 	make('',int(sys.argv[1]))		
 	
 File.close()		
-print '\nthe script is end.........'
+print '\nthe script is end........use time:',time.time()-StartTime,'second'
